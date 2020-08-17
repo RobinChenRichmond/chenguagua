@@ -7,7 +7,7 @@ var logger = require('morgan');
 // New Code
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('mongodb+srv://chenguanyu1995:cgy123824@guanyuplayground.t17bx.mongodb.net/<dbname>?retryWrites=true&w=majority');
+var db = monk('mongodb+srv://chenguanyu1995:cgy123824@guanyuplayground.t17bx.mongodb.net/nodetest1?retryWrites=true&w=majority');
 db.then(() =>{
   console.log("connection success");
 }).catch((e)=>{
