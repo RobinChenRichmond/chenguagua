@@ -5,8 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // New Code
+var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
+var db = monk('mongodb+srv://chenguanyu1995:cgy123824@guanyuplayground.t17bx.mongodb.net/<dbname>?retryWrites=true&w=majority');
+db.then(() =>{
+  console.log("connection success");
+}).catch((e)=>{
+  console.error("Error !",e);
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
